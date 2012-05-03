@@ -9,18 +9,4 @@
 		<th>Action</th>
 	</tr>
 
-	<?php	foreach ($user as $user): ?>
-
-	<tr>
-		<td><?php echo $user['User']['username']; ?></td>
-		<td><?php echo $user['User']['password']; ?></td>
-		<td><?php echo $user['User']['level']; ?></td>
-		<td><?php echo $user['User']['koordinator_id']; ?></td>
-
-		<td><?php echo $this->Html->image('edit.png', array('url' => array('action' => 'edit', $user['User']['id']))); ?>
-			
-		<td><?php echo $this->Form->postLink('Delete', array('action' => 'delete', $user['User']['id']),array('confirm'=>'anda yakin?'));?></td>
-	</tr>
-
-	<?php	endforeach; ?>
 </table>

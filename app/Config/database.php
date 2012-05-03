@@ -64,7 +64,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => '',
+		'password' => 'localhost',
 		'database' => 'smsd',
 		'prefix' => '',
 		//'encoding' => 'utf8',

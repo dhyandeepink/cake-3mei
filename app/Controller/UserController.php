@@ -6,7 +6,7 @@ class UserController extends AppController{
 
 
 	public function index(){
-	 $this->set('user' , $this->User->find('all'));
+	// $this->set('user' , $this->User->find('all'));
 	}
 
 	public function add(){
