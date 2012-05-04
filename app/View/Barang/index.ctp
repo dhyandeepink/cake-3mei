@@ -26,6 +26,7 @@
                         'Delete', array('action' => 'delete', $row['Barang']['id']), array('confirm' => 'Are you sure?'));
                 ?>
         </tr>
+        <?php $i++;?>
             <?php endforeach; ?>
 
 </table>

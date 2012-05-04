@@ -29,18 +29,18 @@ class BarangController extends AppController {
         $this->Barang->id = $id;
         if ($this->request->is('get')) {
             $this->request->data = $this->Barang->read();
+            $this->set('barang', $this->Barang->read());
+            $pasars = $this->Barang->Pasar->find('list', array('fields' => array('Pasar.id', 'Pasar.nama_pasar')));
+            $this->set(compact('pasars'));
+            $masters = $this->Barang->Master->find('list', array('fields' => array('Master.id', 'Master.nama_barang')));
+            $this->set(compact('masters'));
         } else {
-
             if ($this->Barang->save($this->request->data)) {
                 $this->Session->setFlash('data has updated');
                 $this->redirect(array('action' => 'index'));
             } else {
                 $this->Session->setFlash('data failed to update');
             }
-            $pasar = $this->Barang->Pasar->find('list', array('fields' => array('Pasar.id', 'Pasar.nama_pasar')));
-            $this->set(compact('pasar'));
-            $master = $this->Barang->Master->find('list', array('fields' => array('Master.id', 'Master.nama_barang')));
-            $this->set(compact('master'));
         }
     }
 
