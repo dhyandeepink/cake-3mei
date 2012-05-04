@@ -7,21 +7,20 @@ class Barang extends AppModel {
         'Master' => array(
             'className' => 'Master',
             'foreignKey' => 'master_id'
-        )
-    );
-    var $belongsTos = array(
+        ),
         'Pasar' => array(
             'className' => 'Pasar',
             'foreignKey' => 'pasar_id'
         )
     );
+
     public $validate = array(
         'kode_barang' => array(
             'rule' => 'notEmpty'
         ),
         'harga' => array(
             'rule' => 'numeric',
-            'message'=>'Masuk harga yang benar'
+            'message' => 'Masuk harga yang benar'
         ),
         'pasar_id' => array(
             'rule' => 'notEmpty'

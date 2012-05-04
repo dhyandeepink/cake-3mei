@@ -6,10 +6,7 @@ class BarangController extends AppController {
     public $components = array('Session');
 
     public function index() {
-        $data = $this->Barang->find('all');
-        print_r($data);
-//        exit;
-        $this->set('barangs' , $this->Barang->find('all'));
+        $this->set('barangs', $this->Barang->find('all'));
     }
 
     public function add() {
@@ -40,6 +37,10 @@ class BarangController extends AppController {
             } else {
                 $this->Session->setFlash('data failed to update');
             }
+            $pasar = $this->Barang->Pasar->find('list', array('fields' => array('Pasar.id', 'Pasar.nama_pasar')));
+            $this->set(compact('pasar'));
+            $master = $this->Barang->Master->find('list', array('fields' => array('Master.id', 'Master.nama_barang')));
+            $this->set(compact('master'));
         }
     }
 

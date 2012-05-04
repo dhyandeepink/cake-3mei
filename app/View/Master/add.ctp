@@ -1,4 +1,4 @@
-<?php echo $this->Form->create('Master', array('type' => 'file', 'inputDefaults' => array('label' => false, 'div' => false))); ?>
+<?php echo $this->Form->create('Master', array('inputDefaults' => array('label' => false, 'div' => false))); ?>
 
 <font face=tahoma size=5> <center> <b> Data Tipe Barang </b></center> </font> <br><br>
 

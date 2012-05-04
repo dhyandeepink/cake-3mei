@@ -1,5 +1,5 @@
 <h1>List Harga Barang</h1>
-
+<?php echo $this->Html->Link("Tambah", array('action' => 'add')); ?>
 <table border="1">
     <tr>
 
@@ -15,7 +15,7 @@
         <tr>
             <td><?php echo $i; ?></td>
             <td><?php echo $row['Master']['nama_barang']; ?></td>
-            <td><?php echo $row['Barang']['pasar_id']; ?></td>
+            <td><?php echo $row['Pasar']['nama_pasar']; ?></td>
             <td><?php echo $row['Barang']['harga']; ?></td>
             <td>
                 <?php
