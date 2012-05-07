@@ -1,2 +1,2 @@
-1336153015
+1336254056
 a:4:{s:2:"id";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:20;s:3:"key";s:7:"primary";}s:11:"kode_barang";a:6:{s:4:"type";s:6:"string";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:20;s:7:"collate";s:17:"latin1_swedish_ci";s:7:"charset";s:6:"latin1";}s:11:"nama_barang";a:6:{s:4:"type";s:6:"string";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:100;s:7:"collate";s:17:"latin1_swedish_ci";s:7:"charset";s:6:"latin1";}s:12:"jenis_barang";a:6:{s:4:"type";s:98:"enum('beras','telur','minyak_goreng','daging','susu','minyak_tanah','gula_pasir','garam','jagung')";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:13;s:7:"collate";s:17:"latin1_swedish_ci";s:7:"charset";s:6:"latin1";}}
