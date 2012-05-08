@@ -12,46 +12,12 @@ $(document).ready(function(){
         var pasar_id = $('#k-pasar');
         if(level === 'Admin'){
             $('.k-data').hide('fast');
-//            $('#form-user').submit(function(){
-//                var data_user = $(this).serialize();
-//                $.ajax({
-//                    type:'POST',
-//                    url:base_path+'User/add',
-//                    cache :false, 
-//                    data: data_user,
-//                    success:function(data){
-//                        $('#message').html('<span>Berhasil</span>')
-//                        $(location).attr(base_path+'Pasar/');
-//                    },
-//                    error:function(data){
-//                        $('#message').html('<span>Gagal</span>')
-//                        console.log(data.responseText);
-//                    }
-//                });
-//                return false;
-//            });
         }
-        else{
+        else if(level === 'Koordinator'){
             $('.k-data').show('fast');
-//            $('#form-user').submit(function(){
-//                var data_user = $(this).serialize();
-//                $.ajax({
-//                    type:'POST',
-//                    url:base_path+'User/add',
-//                    cache :false, 
-//                    data: data_user,
-//                    success:function(data){
-//                        $('#message').html('<span>Berhasil</span>')
-//                    },
-//                    error:function(data){
-//                        $('#message').html('<span>Gagal</span>')
-//                        console.log(data.responseText);
-//                    }
-//                });
-//                return false;
-//            });
-                    
-
+        }
+        else {
+            $('.k-data').hide('fast');
         }
     });
 

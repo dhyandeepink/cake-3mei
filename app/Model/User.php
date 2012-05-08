@@ -4,12 +4,8 @@ App::uses('AuthComponent', 'Controller/Component');
 class User extends AppModel {
 
     public $name = 'User';
-//    var $hasOne = array(
-//        'Koordinator' => array(
-//            'className' => 'Koordinator',
-//            'foreignKey' => 'koordinator_id',
-//        )
-//    );
+
+    var $hasOne = array('Koordinator');
     public $displayField = 'nama';
     public $validate = array(
         'nama' => array(

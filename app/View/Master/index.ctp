@@ -1,15 +1,11 @@
-<?php echo $this->Html->Link("Tambah Type Barang", array('action' => 'add')); ?>
-
 <h1>List Tipe Barang</h1>
+<?php echo $this->Html->Link("Tambah Type Barang", array('action' => 'add')); ?>
 <table border="1">
 	<tr>
-
-		
 		<th>Kode Barang</th>
 		<th>Nama Barang</th>
 		<th>Kelompok Barang</th>
 		<th>Action</th>
-
 	</tr>
         <?php if(empty($masters)):?>
             <?php echo '<b>Data tidak ada.</b>';?>

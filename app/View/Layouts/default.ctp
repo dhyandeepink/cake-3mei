@@ -24,7 +24,7 @@
 
 
                     <div id="menu"> Input Data : <br>
-                        <ul><li> <?php echo $this->Html->link(__('Admin', true), '../User/add'); ?> </li><br>
+                        <ul><li> <?php echo $this->Html->link(__('Admin', true), '../User/'); ?> </li><br>
                             <li> <?php echo $this->Html->link(__('Koordinator', true), '../Koordinator/'); ?> </li><br>
                             <li> <?php echo $this->Html->link(__('Tipe Barang', true), '../Master/'); ?> </li><br>
                             <li> <?php echo $this->Html->link(__('Harga Barang', true), '../Barang/'); ?> </li><br>

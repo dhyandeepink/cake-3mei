@@ -15,43 +15,37 @@
             <tr class="u-data">
                 <td>Nama : </td>
                 <td>
-                    <input type="text" id="u-name" name="data[User][nama]" id="u-name"></input>
+                    <input type="text" id="u-name" name="data[User][nama]"></input>
                 </td>
             </tr> 
             <tr class="u-data">
                 <td>Username : </td>
                 <td>
-                    <input type="text" id="u-username" name="data[User][username]" id="u-username"></input>
+                    <input type="text" id="u-username" name="data[User][username]"></input>
                 </td>
             </tr>
             <tr class="u-data">
                 <td>Password : </td>
                 <td>
-                    <input type="password" id="u-password" name="data[User][password]" id="u-password"></input>
+                    <input type="password" id="u-password" name="data[User][password]"></input>
                 </td>
             </tr> 
             <tr class="k-data">
                 <td>Kode Koordinator : </td>
                 <td>
-                    <input type="text" id="k-kode" name="data[Koordinator][kode_koordinator]" id="u-name"></input>
+                    <input type="text" id="k-kode" name="data[Koordinator][kode_koordinator]"></input>
                 </td>
             </tr>
             <tr class="k-data">
                 <td>No. HP : </td>
                 <td>
-                    <input type="text" id="k-phone" name="data[Koordinator][no_hp]" id="u-name"></input>
+                    <input type="text" id="k-phone" name="data[Koordinator][no_hp]"></input>
                 </td>
             </tr>
             <tr class="k-data">
-                <td>Pasar : </td>
-                <td>
-                    <select name="data[Koordinator][pasar_id]" id="k-pasar">
-                        <option id="1">1</option>
-                        <option id="2">2</option>
-                        <option id="3">3</option>
-                    </select>
-        <!--                   <td> <?php // echo $this->Form->input('pasar_id', array('type' => 'select', 'options' => $pasars));            ?> </td>-->
-                </td>
+<!--                <td>Pasar : </td>-->
+                <td> <?php echo $this->Form->input('pasar_id', array('type' => 'select', 'options' => $pasars));  ?> </td>
+
             </tr>
             <div>
                 <tr>

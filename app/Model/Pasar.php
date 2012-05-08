@@ -3,14 +3,14 @@
 class Pasar extends AppModel {
 
     var $name = 'Pasar';
-    var $hasMany = array(
-        'Koordinator' => array(
-            'className' => 'Koordinator',
-            'foreignKey' => 'pasar_id',
-//			'conditions' => array ('Pasar.kode_pasar' => 'P_1'),
-        )
-    );
+//    var $hasMany = array(
+//        'Koordinator' => array(
+//            'className' => 'Koordinator',
+//            'foreignKey' => 'pasar_id',
+//        )
+//    );
     var $hasOne = array(
+        'Koordinator' => array('Koordinator'),
         'Barang' => array(
             'className' => 'Barang',
             'foreignKey' => 'pasar_id',

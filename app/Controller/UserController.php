@@ -56,29 +56,43 @@ class UserController extends AppController {
 
     public function add() {
         if ($this->request->is('post')) {
-//            $input_u = array(
-//                'username' => $this->request->data['User']['username'],
-//                'level' => $this->request->data['User']['level'],
-//                'nama' => $this->request->data['User']['nama'],
-//                'password' => $this->request->data['User']['password']
-//            );
-            $input = array(
+            $u = array(
                 'username' => $this->request->data['User']['username'],
                 'level' => $this->request->data['User']['level'],
                 'nama' => $this->request->data['User']['nama'],
-                'password' => $this->request->data['User']['password'],
-                'kode_koordinator' => $this->request->data['Koordinator']['kode_koordinator'],
-                'no_hp' => $this->request->data['Koordinator']['no_hp'],
-                'pasar_id' => $this->request->data['Koordinator']['pasar_id']
+                'password' => $this->request->data['User']['password']
             );
 
-            if ($this->User->save($input)) {
-                $this->Session->setFlash('The user has been saved');
+            $k = array(
+                'kode_koordinator' => $this->request->data['Koordinator']['kode_koordinator'],
+                'no_hp' => $this->request->data['Koordinator']['no_hp'],
+                'pasar_id' => $this->request->data['pasar_id']
+            );
+
+
+            if (!empty($k['kode_koordinator']) && !empty($k['no_hp']) && !empty($k['pasar_id'])) {
+                $this->User->save($u);
+                $id_user = $this->User->getLastInsertID();
+                $data = array(
+                    'kode_koordinator' => $this->request->data['Koordinator']['kode_koordinator'],
+                    'no_hp' => $this->request->data['Koordinator']['no_hp'],
+                    'pasar_id' => $this->request->data['pasar_id'],
+                    'user_id' => $id_user
+                );
+             
+                $this->User->Koordinator->save($data);
+                $this->Session->setFlash('Koordinator berhasil ditambahkan.');
+                $this->redirect(array('action' => 'index'));
+            } else if (!empty($u['username']) && !empty($u['level']) && !empty($u['nama']) && !empty($u['password'])) {
+                $this->User->save($u);
+                $this->Session->setFlash('User berhasil ditambahkan.');
                 $this->redirect(array('action' => 'index'));
             } else {
-                $this->Session->setFlash('User tidak dapat ditambahkan. Coba sekali lagi.');
+                $this->Session->setFlash('Gagal menambahkan user. Periksa kembali inputan anda.');
             }
         }
+        $pasars = $this->User->Koordinator->Pasar->find('list', array('fields' => array('Pasar.id', 'Pasar.nama_pasar')));
+        $this->set('pasars', $pasars);
     }
 
     public function edit($id = null) {

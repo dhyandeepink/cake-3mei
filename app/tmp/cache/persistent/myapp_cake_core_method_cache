@@ -1,2 +1,2 @@
-1336315154
-a:2:{s:4:"name";a:8:{i:-727973174;s:6:"`smsd`";i:-282477101;s:6:"`user`";i:-355506175;s:11:"`User`.`id`";i:-1478908716;s:13:"`User`.`nama`";i:-1049620459;s:17:"`User`.`username`";i:-110801263;s:17:"`User`.`password`";i:-1975160519;s:14:"`User`.`level`";i:786993879;s:6:"`User`";}s:6:"fields";a:1:{s:32:"739b10d5cb8b709fb67ec3309a8ba94c";a:5:{i:0;s:11:"`User`.`id`";i:1;s:13:"`User`.`nama`";i:2;s:17:"`User`.`username`";i:3;s:17:"`User`.`password`";i:4;s:14:"`User`.`level`";}}}
+1336417954
+a:1:{s:4:"name";a:2:{i:-727973174;s:6:"`smsd`";i:-282477101;s:6:"`user`";}}
